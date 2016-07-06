@@ -1,3 +1,13 @@
+/*
+// Butchershop 2016
+//
+// This tool allows you to calculate stroke all SVG strokedashoffset attributes
+// to properly input the correct numbers for animations.
+//
+// 7/6/2016 - DW : Created
+*/
+
+
 var tools = {
   /**
    *
