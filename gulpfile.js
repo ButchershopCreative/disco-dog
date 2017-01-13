@@ -1,11 +1,11 @@
-var gulp = require('gulp');
-var browserify = require('browserify');
-var connect = require('gulp-connect');
-var cssnano = require('gulp-cssnano');
-var gulpLoadPlugins = require('gulp-load-plugins');
-var order = require("gulp-order");
-var source = require('vinyl-source-stream');
-var plugins = gulpLoadPlugins();
+var gulp = require('gulp'),
+    browserify = require('browserify'),
+    connect = require('gulp-connect'),
+    cssnano = require('gulp-cssnano'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    order = require("gulp-order"),
+    source = require('vinyl-source-stream'),
+    plugins = gulpLoadPlugins();
 
 function onError(error){
   plugins.notify().write(error.message);
@@ -35,28 +35,52 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('dist/scripts'));
 });
 
-//Sass Styles
+// Sass Styles . styles is only one level deep. CSS will be library assets
+// that will compile first
 gulp.task('styles', function() {
-  gulp.src(['css/*.scss'])
+  gulp.src([
+      'css/*.css',
+      'css/*.scss'
+  ])
   .pipe(plugins.sass({
     outputStyle: 'expanded' // nested, expanded, compact, compressed
   }).on('error', onError))
   .pipe(plugins.autoprefixer())
-  .pipe(order([
-    'css/**/*.css'
-  ]))
   .pipe(plugins.concat('style.css'))
   .pipe(cssnano())
   .pipe(gulp.dest('dist/styles'))
   .pipe(plugins.notify('Styles Gulped'));
 });
 
+
+// Only used for live reload. Looks for compiled file ./dist
+// change in liveConnect task.
+gulp.task('html', function() {
+  gulp.src('*.html')
+    .pipe(connect.reload())
+    .pipe(plugins.notify('HTML Reloaded'));
+});
+
 gulp.task('serve', function() {
   connect.server({
-    root: './',
+    root: './'
   });
   gulp.watch('css/*.scss', ['styles']);
   gulp.watch('js/*.js', ['scripts']);
 });
 
+gulp.task('liveConnect', function() {
+  connect.server({
+    root: './',
+    port: 8080,
+    livereload: true
+  });
+  gulp.watch('css/*.scss', ['styles']);
+  gulp.watch('js/*.js', ['scripts']);
+  gulp.watch('*.html', ['html']);
+  gulp.watch(['dist/**/*.js', 'dist/**/*.css'], ['html']);
+
+});
+
 gulp.task('default', [ 'scripts', 'styles', 'serve']);
+gulp.task('live', ['liveConnect', 'styles', 'scripts']);
