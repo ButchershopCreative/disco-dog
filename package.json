@@ -15,10 +15,14 @@
     "gulp-concat": "^2.6.0",
     "gulp-connect": "^2.3.1",
     "gulp-cssnano": "^2.1.0",
+    "gulp-file-include": "^1.1.0",
     "gulp-load-plugins": "^1.2.0",
     "gulp-notify": "^2.2.0",
     "gulp-order": "^1.1.1",
     "gulp-sass": "^2.1.1",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "browser": {
+    "jquery": "./src/js/jquery.min.js"
   }
 }

@@ -15,7 +15,7 @@ function onError(error){
 //Build browserify and jsx
 gulp.task('scripts', function() {
   browserify({
-    entries: ['./js/index.js'],
+    entries: ['./src/js/index.js'],
     extensions: ['.js'],
     debug: true
   })
@@ -39,8 +39,8 @@ gulp.task('vendor', function() {
 // that will compile first
 gulp.task('styles', function() {
   gulp.src([
-      'css/*.css',
-      'css/*.scss'
+      './src/css/*.css',
+      './src/css/*.scss'
   ])
   .pipe(plugins.sass({
     outputStyle: 'expanded' // nested, expanded, compact, compressed
@@ -65,8 +65,8 @@ gulp.task('serve', function() {
   connect.server({
     root: './'
   });
-  gulp.watch('css/*.scss', ['styles']);
-  gulp.watch('js/*.js', ['scripts']);
+  gulp.watch('./src/css/*.scss', ['styles']);
+  gulp.watch('./src/js/*.js', ['scripts']);
 });
 
 gulp.task('liveConnect', function() {
@@ -75,8 +75,8 @@ gulp.task('liveConnect', function() {
     port: 8080,
     livereload: true
   });
-  gulp.watch('css/*.scss', ['styles']);
-  gulp.watch('js/*.js', ['scripts']);
+  gulp.watch('./src/css/*.scss', ['styles']);
+  gulp.watch('./src/js/*.js', ['scripts']);
   gulp.watch('*.html', ['html']);
   gulp.watch(['dist/**/*.js', 'dist/**/*.css'], ['html']);
 
