@@ -52,6 +52,12 @@ gulp.task('styles', function() {
   .pipe(plugins.notify('Styles Gulped'));
 });
 
+gulp.task('fonts', function() {
+  return gulp.src([
+    './src/fonts/*'
+  ])
+  .pipe(gulp.dest('dist/fonts'));
+});
 
 // Only used for live reload. Looks for compiled file ./dist
 // change in liveConnect task.
@@ -82,5 +88,5 @@ gulp.task('liveConnect', function() {
 
 });
 
-gulp.task('default', [ 'scripts', 'styles', 'serve']);
-gulp.task('live', ['liveConnect', 'styles', 'scripts']);
+gulp.task('default', ['fonts', 'scripts', 'styles', 'serve']);
+gulp.task('live', ['liveConnect', 'fonts', 'styles', 'scripts']);
