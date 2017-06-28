@@ -1,4 +1,8 @@
-@font-face {
-       font-family: 'Font Name';
-       src: url('./../fonts.ttf');
-}
+/* Font only builds once in gulp when you
+   first run it for optimization.
+*/
+
+// @font-face {
+//        font-family: 'Font Name';
+//        src: url('./../fonts.ttf');
+// }

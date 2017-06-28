@@ -9,7 +9,7 @@ Spinning up an html splash gets repetitive. The reason for this is to optimize w
   - SASS
   - Gulp
   - Gulp Live Reload
-  - Gulp HTML Templates(coming soon)
+  - Gulp HTML Templates(Gulp @@include)
 
 ## Instructions
    If we are spinning this up to a new repo:

@@ -1,5 +1,8 @@
 var jQuery = require('jquery');
 
+window.jQuery = $;
+window.$ = jQuery;
+
 (function($) {
 
   var App =  {

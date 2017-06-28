@@ -24,5 +24,9 @@
   },
   "browser": {
     "jquery": "./src/js/jquery.min.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0"
   }
 }
