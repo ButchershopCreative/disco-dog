@@ -1,13 +1,13 @@
-var jQuery = require('jquery');
+import $ from 'jquery';
+window.$ = window.jQuery = $; // Making these bad boys global so we dont require them anywhere else
 
-window.jQuery = $;
-window.$ = jQuery;
+import Example from './components/_Example.js';
 
 (function($) {
 
   var App =  {
     init: function() {
-      console.log(1);
+        Example();
     }
   }
 
