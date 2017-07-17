@@ -23,23 +23,13 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('dist/scripts'));
 });
 
-// Gulp include partial files
-gulp.task('fileinclude', function() {
-  gulp.src(['./src/*.html'])
-    .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest('./'));
-});
-
 gulp.task('test', function() {
   runSequence(
+    'build-html',
     'build-images',
     'build-sass',
     'build-scripts',
     'build-fonts',
-    'dev-fileinclude',
     'live-connect',
     'live-watch'
   );
