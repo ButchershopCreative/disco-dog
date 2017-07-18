@@ -1,15 +1,78 @@
 section.comingsoon {
+  overflow: hidden;
   color: white;
+  margin-bottom: 250px;
 
   img {
+    position: relative;
     padding-bottom: 200px;
   }
-  
+
+  h2 {
+    position: absolute;
+    margin-top: -500px;
+    left: 50%;
+  }
+  hr {
+    color: white;
+    margin: 0;
+  }
+
+
+  // [type=text] {
+  //   float: right;
+  //   background-color: transparent;
+  //   border: none;
+  //   border-bottom: 1px solid #CCC;
+  //   border-color: $parker-blue;
+  //   color: #555;
+  //   box-sizing: border-box;
+  //   font-family: 'Arvo';
+  //   font-size: 18px;
+  //   display: inline-block;
+  //   // top: 50%;
+  //   width: 70px;
+  // }
+  //
+
+  .white {
+    color: white;
+  }
+
+  .inputfield {
+    float: right;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #CCC;
+    border-color: $parker-blue;
+    color: white;
+    box-sizing: border-box;
+    width: 100px;
+  }
+
+  .inputfield:focus {
+    // background-color: transparent;
+    // border: none;
+    // border-bottom: 1px solid #CCC;
+    // border-color: $parker-blue;
+    // color: white;
+    // box-sizing: border-box;
+    outline-width: 0;
+  }
+
+  .mybutton {
+    display: block;
+  }
+
   .couch {
+    display: inline;
     background: url('../img/SVGS/Couch.svg');
     background-repeat: no-repeat;
-    height: 100px;
-    padding-left: 250px;
+    height: 250px;
+    padding-left: 350px;
+    @include breakpoint(small) {
+      // margin-top: 400px;
+    };
   }
 
   .rotate-bars {

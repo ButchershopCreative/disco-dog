@@ -1,39 +1,105 @@
 section.top {
   color: white;
+
   .parker {
-    // width: 300px;
-  }
-  .parkercss {
+    position: absolute;
     background: url('../img/SVGS/Logo.svg');
     background-repeat: no-repeat;
     height: 100px;
+    width: 200px;
+    margin-top: -150px;
+    margin-left: 50px;
   }
+
   .circle {
+    position: absolute;
     background: url('../img/SVGS/Circle.svg');
     background-repeat: no-repeat;
-    height: 100px;
+    height: 250px;
+    width: 250px;
+    margin-top: -350px;
+    margin-left: 350px;
   }
-  .couch {
-    background: url('../img/SVGS/Couch.svg');
+
+  .bed {
+    position: absolute;
+    background: url('../img/SVGS/Bed.svg');
     background-repeat: no-repeat;
-    height: 100px;
+    height: 150px;
+    width: 150px;
+    margin-top: -275px;
+    margin-left: 78%;
+
+    @include breakpoint(small) {
+      margin-top: -900px;
+      height: 225px;
+      width: 225px;
+      margin-left: -15%;
+    };
   }
   .arrow {
+    position: absolute;
     background: url('../img/SVGS/Arrow.svg');
     background-repeat: no-repeat;
-    height: 100px;
+    height: 25px;
+    width: 25px;
+    margin-top: -100px;
+    margin-left: 53%;
   }
+
   .slash {
+    position: absolute;
     background: url('../img/SVGS/Slash.svg');
     background-repeat: no-repeat;
+    // Flip horizontally
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
     height: 100px;
+    width: 100px;
+    margin-top: -100px;
+    margin-left: 65%;
+
+    @include breakpoint(small) {
+      height: 200px;
+      width: 200px;
+      margin-top: -330px;
+      margin-left: 75%;
+    };
+  }
+
+  .push-left {
+    padding-left: 0px;
   }
 
   .vertical-image {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    @include breakpoint(small) {
+      width: 80%;
+    };
   }
-  .row {
-    height: 200px;
+
+  .intro-content {
+    margin-top: 50px;
+  }
+
+  .desktop-header {
+    margin-bottom: 200px;
+    @include breakpoint(small) {
+      // display: none;
+      height: 500px;
+    };
+
+  }
+
+  .mobile-header {
+    display: none;
+    @include breakpoint(small) {
+      display: inline-block;
+      height: 500px;
+    };
   }
 }

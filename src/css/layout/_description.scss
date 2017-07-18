@@ -1,0 +1,153 @@
+section.description {
+  color: white;
+  margin-bottom: 150px;
+
+  .column {
+    padding: 0px;
+  }
+
+  .hanger {
+    position: absolute;
+    background: url('../img/SVGS/Hanger.svg');
+    background-repeat: no-repeat;
+    height: 275px;
+    width: 275px;
+    margin-top: -225px;
+    margin-left: -25px;
+  }
+
+  .closet {
+    position: absolute;
+    background: url('../img/SVGS/Closet.svg');
+    background-repeat: no-repeat;
+    height: 225px;
+    width: 275px;
+    margin-top: -200px;
+    margin-left: 375px;
+  }
+
+  .slash {
+    position: absolute;
+    background: url('../img/SVGS/Slash.svg');
+    background-repeat: no-repeat;
+    height: 225px;
+    width: 225px;
+    margin-top: -600px;
+    margin-left: 0px;
+    // Flip horizontally
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
+
+  .bars {
+    position: absolute;
+    background: url('../img/SVGS/Tab.svg');
+    background-repeat: no-repeat;
+    -ms-transform: rotate(-180deg); /* IE 9 */
+    -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
+    transform: rotate(-180deg);
+    height: 250px;
+    width: 250px;
+    margin-top: -900px;
+    margin-left: 275px;
+  }
+
+  .desktop-container {
+    @include breakpoint(small) {
+      display: none;
+    };
+  }
+
+  .mobile-container {
+    display: none;
+    margin-top: 200px;
+    @include breakpoint(small) {
+      display: block;
+    };
+  }
+
+  ul > li {
+    color: $parker-blue;
+    margin-bottom: 15px;
+  }
+
+  .bench {
+    background: url('../img/SVGS/Bench.svg');
+    background-repeat: no-repeat;
+    height: 350px;
+  }
+
+  .bench-mobile {
+    position: absolute;
+    background: url('../img/SVGS/Bench.svg');
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    margin-left: 190px;
+  }
+
+  .circle {
+    position: absolute;
+    background: url('../img/SVGS/Circle.svg');
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    margin-top: 100px;
+    margin-left: -200px;
+  }
+
+  .inspiration {
+    margin-top: 100px;
+    margin-right: 100px;
+  }
+
+  .amenities {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  .test {
+    display: inline-block;
+  }
+
+  .right-pictures {
+    margin-right: 50px;
+  }
+
+  .shattuck {
+    font-size: 124px;
+    display: inline-block;
+    transform: rotate(-90deg);
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+
+  .parkerblue {
+    color: $parker-blue;
+  }
+
+  .left-images {
+    width: 450px;
+    float: left;
+  }
+
+  .cooking-lady {
+    width: 450px;
+    float: right;
+  }
+
+  .amenities-mobile {
+    display: block;
+    width: 250px;
+    margin-left: 50px;
+    margin-top: 150px;
+  }
+
+  .park {
+    height: 400px;
+  }
+}
