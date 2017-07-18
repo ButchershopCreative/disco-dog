@@ -11,6 +11,18 @@ section.top {
     margin-left: 50px;
   }
 
+  .bars {
+    @include breakpoint(small) {
+      position: absolute;
+      background: url('../img/SVGS/Tab.svg');
+      background-repeat: no-repeat;
+      height: 150px;
+      width: 150px;
+      margin-top: 00px;
+      margin-left: 65%;
+    }
+  }
+
   .circle {
     position: absolute;
     background: url('../img/SVGS/Circle.svg');
@@ -19,6 +31,13 @@ section.top {
     width: 250px;
     margin-top: -350px;
     margin-left: 350px;
+
+    @include breakpoint(small) {
+      width: 400px;
+      height: 400px;
+      margin-top: -100px;
+      margin-left: -75px;
+    }
   }
 
   .bed {
@@ -32,11 +51,12 @@ section.top {
 
     @include breakpoint(small) {
       margin-top: -900px;
-      height: 225px;
-      width: 225px;
-      margin-left: -15%;
+      height: 275px;
+      width: 275px;
+      margin-left: -20%;
     };
   }
+
   .arrow {
     position: absolute;
     background: url('../img/SVGS/Arrow.svg');
@@ -45,6 +65,14 @@ section.top {
     width: 25px;
     margin-top: -100px;
     margin-left: 53%;
+
+    @include breakpoint(small) {
+      margin-top: -650px;
+      margin-left: 50%;
+      height: 40px;
+      width: 40px;
+      transform:rotate(180deg);
+    };
   }
 
   .slash {
@@ -71,6 +99,21 @@ section.top {
     };
   }
 
+  .numbers {
+    display: none;
+    @include breakpoint(small) {
+      transform: rotate(-90deg);
+      position: absolute;
+      display: inline-block;
+      font-size: 150px;
+      margin-left: 60%;
+      margin-top: -400px;
+      & > span {
+        color: $parker-blue
+      }
+    }
+  }
+
   .push-left {
     padding-left: 0px;
   }
@@ -86,11 +129,11 @@ section.top {
     margin-top: 50px;
   }
 
-  .desktop-header {
+  .header {
     margin-bottom: 200px;
     @include breakpoint(small) {
       // display: none;
-      height: 500px;
+      height: 450px;
     };
 
   }
