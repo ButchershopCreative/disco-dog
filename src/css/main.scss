@@ -1,13 +1,15 @@
-@import 'normalize';
-@import 'vars';
-@import 'mixins';
-@import 'fonts';
-@import 'typography';
+@import './base/foundation.scss';
+@import './base/normalize';
+@import './abstracts/vars';
+@import './abstracts/mixins';
+@import './base/fonts';
+@import './abstracts/typography';
+@import './layout/_top.scss';
+@import './layout/_comingsoon.scss';
+@import './layout/_footer.scss';
+
 
 body {
   margin: 0;
+  background-color: black;
 }
-
-
-
-

@@ -1,0 +1,25 @@
+section.comingsoon {
+  color: white;
+
+  img {
+    padding-bottom: 200px;
+  }
+  
+  .couch {
+    background: url('../img/SVGS/Couch.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+    padding-left: 250px;
+  }
+
+  .rotate-bars {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  .bars {
+    background: url('../img/SVGS/Tab.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+}

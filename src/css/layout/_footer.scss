@@ -1,0 +1,108 @@
+section.footer {
+  color: white;
+  .contact-container {
+    width: 250px;
+    font-size: 14px;
+    margin-left: 50%;
+    @include breakpoint(small) {
+      width: 500px;
+      font-size: 16px;
+      letter-spacing: 5px;
+      margin-left: 0;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .phone {
+    color: $parker-blue;
+  }
+
+  .legal {
+    padding-top: 45px;
+    hr {
+      margin-top: 5px;
+      margin-bottom: 10px;
+      border-color: $parker-blue;
+    }
+  }
+
+  .parkercss {
+    background: url('../img/SVGS/Logo.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 600px;
+    margin: auto;
+  }
+
+  .facebook {
+    display: inline-block;
+    background: url('../img/SVGS/Facebook.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .twitter {
+    display: inline-block;
+    background: url('../img/SVGS/Twitter.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .housing {
+    display: inline-block;
+    background: url('../img/SVGS/EqualHousing.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .disability {
+    display: inline-block;
+    background: url('../img/SVGS/Disable.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .paws {
+    display: inline-block;
+    background: url('../img/SVGS/Paws.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .facebook-hover {
+    display: inline-block;
+    background: url('../img/SVGS/FacebookHover.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .twitter-hover {
+    display: inline-block;
+    background: url('../img/SVGS/TwitterHover.svg');
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+  }
+
+  .social-mobile {
+    display:none;
+    @include breakpoint(small) {
+      display: block;
+    }
+  }
+
+  .social-desktop {
+    margin-left: 50%;
+    @include breakpoint(small) {
+      display: none;
+    }
+  }
+}

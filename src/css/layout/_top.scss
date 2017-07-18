@@ -1,0 +1,39 @@
+section.top {
+  color: white;
+  .parker {
+    // width: 300px;
+  }
+  .parkercss {
+    background: url('../img/SVGS/Logo.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+  .circle {
+    background: url('../img/SVGS/Circle.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+  .couch {
+    background: url('../img/SVGS/Couch.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+  .arrow {
+    background: url('../img/SVGS/Arrow.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+  .slash {
+    background: url('../img/SVGS/Slash.svg');
+    background-repeat: no-repeat;
+    height: 100px;
+  }
+
+  .vertical-image {
+    height: 300px;
+    width: 300px;
+  }
+  .row {
+    height: 200px;
+  }
+}
