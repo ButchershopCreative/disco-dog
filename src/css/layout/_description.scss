@@ -89,6 +89,18 @@ section.description {
     width: 400px;
     margin-top: 100px;
     margin-left: -200px;
+    animation: circleburglar 5s infinite linear;
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: url($svg-path + 'Dot.svg');
+      height: 25px;
+      width: 25px;
+      bottom: -3px;
+      right: calc(50% - 12.5px);
+      position: absolute;
+    }
   }
 
   .inspiration {
