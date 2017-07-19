@@ -1,6 +1,7 @@
 section.comingsoon {
   overflow: hidden;
   margin-bottom: 250px;
+  position: relative;
 
   img {
     position: relative;
@@ -31,6 +32,8 @@ section.comingsoon {
   .inputfield {
     float: right;
     text-align: left;
+    // padding-bottom: 0;
+    padding-left: 0;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #CCC;
@@ -38,10 +41,10 @@ section.comingsoon {
     color: $white;
     box-sizing: border-box;
     width: 100%;
-  }
 
-  .inputfield:focus {
-    outline-width: 0;
+    &:focus {
+      box-shadow: none;
+    }
   }
 
   .inspireme {
@@ -60,13 +63,27 @@ section.comingsoon {
   }
 
   .couch {
-    display: inline;
+    position: absolute;
     background: url($svg-path + 'Couch.svg');
     background-repeat: no-repeat;
-    height: 250px;
-    padding-left: 350px;
+    width: 200px;
+    height: 200px;
+    bottom: 20px;
+    right: -70px;
+
+    @include breakpoint(medium) {
+      width: 150px;
+      height: 150px;
+      bottom: 60px;
+      right: -60px;
+    };
+
     @include breakpoint(small) {
-      // margin-top: 400px;
+      // Change this, needs to be under Parker
+      width: 150px;
+      height: 150px;
+      bottom: -200px;
+      right: -60px;
     };
   }
 
@@ -79,5 +96,13 @@ section.comingsoon {
     background: url($svg-path + 'Tab.svg');
     background-repeat: no-repeat;
     height: 100px;
+
+    @include breakpoint(small) {
+      height: 150px;
+      position: absolute;
+      width: 150px;
+      bottom: 360px;
+      left: calc(50% - 75px);
+    };
   }
 }
