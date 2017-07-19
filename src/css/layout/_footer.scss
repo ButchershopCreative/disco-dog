@@ -1,5 +1,7 @@
 section.footer {
   margin-bottom: 20px;
+  position: relative;
+
   @include breakpoint(small) {
     margin-bottom: 120px;
   };
@@ -15,6 +17,7 @@ section.footer {
       letter-spacing: 5px;
       // Shift over to align with Parker
       margin-left: 5%;
+      margin-top: 150px;
     };
 
     p {
@@ -63,8 +66,23 @@ section.footer {
         transform: scale(0.9, 1);
       }
     };
+  }
 
+  .couch {
+    display: none;
+    position: absolute;
+    background: url($svg-path + 'Couch.svg');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    left: calc(50% - 100px);
+    // Force under parker logo
+    z-index: -1;
 
+    @include breakpoint(small) {
+      display: inline-block;
+    };
   }
 
   .facebook {
