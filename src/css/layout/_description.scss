@@ -56,6 +56,12 @@ section.description {
     @include breakpoint(small) {
       display: none;
     };
+
+    .bench {
+      background: url($svg-path + 'Bench.svg');
+      background-repeat: no-repeat;
+      height: 350px;
+    }
   }
 
   .mobile-container {
@@ -64,22 +70,20 @@ section.description {
     @include breakpoint(small) {
       display: block;
     };
+
+    .bench-mobile {
+      position: absolute;
+      background: url($svg-path + 'Bench.svg');
+      background-repeat: no-repeat;
+      height: 400px;
+      width: 400px;
+      margin-left: 190px;
+    }
   }
 
-  .bench {
-    background: url($svg-path + 'Bench.svg');
-    background-repeat: no-repeat;
-    height: 350px;
-  }
 
-  .bench-mobile {
-    position: absolute;
-    background: url($svg-path + 'Bench.svg');
-    background-repeat: no-repeat;
-    height: 400px;
-    width: 400px;
-    margin-left: 190px;
-  }
+
+
 
   .circle {
     position: absolute;

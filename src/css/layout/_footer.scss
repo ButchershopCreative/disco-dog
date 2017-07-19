@@ -47,6 +47,7 @@ section.footer {
   }
 
   .parkercss {
+    position: relative;
     background: url($svg-path + 'Logo.svg');
     background-repeat: no-repeat;
     height: 100px;

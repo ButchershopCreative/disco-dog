@@ -1,27 +1,26 @@
 //All Type goes here. IE H1-H6 . P
 body {
-  font-size: 16px;
   color: $white;
 }
 
 h2 {
   font-size: 120px;
 
-  & > span {
+  span {
     color: $parker-blue;
     font-size: 75px;
   }
 
   @include breakpoint(small) {
     font-size: 70px;
-    & > span {
+    span {
       font-size: 45px;
     }
   };
 
   @include breakpoint(medium) {
     font-size: 90px;
-    & > span {
+    span {
       font-size: 65px;
     }
   };
@@ -37,11 +36,11 @@ hr {
 }
 
 ul {
-  & > li {
+  li {
     color: $parker-blue;
     margin-bottom: 15px;
 
-    & > span {
+    span {
       color: $white;
     }
   }
@@ -51,12 +50,8 @@ ul {
     margin: 0;
     list-style-type: none;
 
-    & > li {
+    li {
       color: $white;
     }
   };
-}
-
-.white {
-  color: $white;
 }
