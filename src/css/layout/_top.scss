@@ -54,6 +54,10 @@ section.top {
       bottom: -7px;
       right: calc(50% - 12.5px);
       position: absolute;
+
+      @include breakpoint(small) {
+        bottom: -3px;
+      }
     }
   }
 
