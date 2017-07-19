@@ -7,6 +7,20 @@ section.comingsoon {
     padding-bottom: 200px;
   }
 
+  .boxingman {
+    background: url($image-path + 'image-05.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    & > h2 {
+      // Middle of div - middle of text (height)
+      padding-top: calc(776px / 2 - 278px / 2);
+    }
+  }
+
   .inputlabel {
     width: 100%;
     color: white;
@@ -46,7 +60,7 @@ section.comingsoon {
 
   .couch {
     display: inline;
-    background: url($image-path + 'Couch.svg');
+    background: url($svg-path + 'Couch.svg');
     background-repeat: no-repeat;
     height: 250px;
     padding-left: 350px;
@@ -61,7 +75,7 @@ section.comingsoon {
   }
 
   .bars {
-    background: url($image-path + 'Tab.svg');
+    background: url($svg-path + 'Tab.svg');
     background-repeat: no-repeat;
     height: 100px;
   }

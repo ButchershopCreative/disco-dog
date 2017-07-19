@@ -7,7 +7,7 @@ section.description {
 
   .hanger {
     position: absolute;
-    background: url($image-path + 'Hanger.svg');
+    background: url($svg-path + 'Hanger.svg');
     background-repeat: no-repeat;
     height: 275px;
     width: 275px;
@@ -17,7 +17,7 @@ section.description {
 
   .closet {
     position: absolute;
-    background: url($image-path + 'Closet.svg');
+    background: url($svg-path + 'Closet.svg');
     background-repeat: no-repeat;
     height: 225px;
     width: 275px;
@@ -27,7 +27,7 @@ section.description {
 
   .slash {
     position: absolute;
-    background: url($image-path + 'Slash.svg');
+    background: url($svg-path + 'Slash.svg');
     background-repeat: no-repeat;
     height: 225px;
     width: 225px;
@@ -41,7 +41,7 @@ section.description {
 
   .bars {
     position: absolute;
-    background: url($image-path + 'Tab.svg');
+    background: url($svg-path + 'Tab.svg');
     background-repeat: no-repeat;
     transform: rotate(-180deg);
     height: 250px;
@@ -67,14 +67,14 @@ section.description {
   }
 
   .bench {
-    background: url($image-path + 'Bench.svg');
+    background: url($svg-path + 'Bench.svg');
     background-repeat: no-repeat;
     height: 350px;
   }
 
   .bench-mobile {
     position: absolute;
-    background: url($image-path + 'Bench.svg');
+    background: url($svg-path + 'Bench.svg');
     background-repeat: no-repeat;
     height: 400px;
     width: 400px;
@@ -83,7 +83,7 @@ section.description {
 
   .circle {
     position: absolute;
-    background: url($image-path + 'Circle.svg');
+    background: url($svg-path + 'Circle.svg');
     background-repeat: no-repeat;
     height: 400px;
     width: 400px;

@@ -5,10 +5,6 @@ body {
 }
 
 h2 {
-  position: absolute;
-  margin: auto;
-  margin-top: -600px;
-  margin-left: 200px;
   font-size: 120px;
 
   & > span {
@@ -16,18 +12,17 @@ h2 {
     font-size: 75px;
   }
 
-  @include breakpoint(medium) {
-
+  @include breakpoint(small) {
+    font-size: 70px;
+    & > span {
+      font-size: 45px;
+    }
   };
 
-  @include breakpoint(small) {
-    margin-top: -400px;
-    margin-left: 20px;
-
-    font-size: 80px;
-
+  @include breakpoint(medium) {
+    font-size: 90px;
     & > span {
-      font-size: 40px;
+      font-size: 65px;
     }
   };
 }

@@ -1,7 +1,7 @@
 section.top {
   .parker {
     position: absolute;
-    background: url($image-path + 'Logo.svg');
+    background: url($svg-path + 'Logo.svg');
     background-repeat: no-repeat;
     height: 25px;
     width: 200px;
@@ -18,7 +18,7 @@ section.top {
   .bars {
     @include breakpoint(small) {
       position: absolute;
-      background: url($image-path + 'Tab.svg');
+      background: url($svg-path + 'Tab.svg');
       background-repeat: no-repeat;
       height: 150px;
       width: 150px;
@@ -29,14 +29,14 @@ section.top {
 
   .circle {
     position: absolute;
-    background: url($image-path + 'Circle.svg');
+    background: url($svg-path + 'Circle.svg');
     background-repeat: no-repeat;
     height: 250px;
     width: 250px;
     margin-top: -350px;
     margin-left: 350px;
     animation: circleburglar 5s infinite linear;
-    
+
 
     @include breakpoint(small) {
       width: 400px;
@@ -48,7 +48,7 @@ section.top {
     &:after {
       content: "";
       display: block;
-      background-image: url($image-path + 'Dot.svg');
+      background-image: url($svg-path + 'Dot.svg');
       height: 25px;
       width: 25px;
       bottom: -7px;
@@ -59,7 +59,7 @@ section.top {
 
   .bed {
     position: absolute;
-    background: url($image-path + 'Bed.svg');
+    background: url($svg-path + 'Bed.svg');
     background-repeat: no-repeat;
     height: 150px;
     width: 150px;
@@ -76,7 +76,7 @@ section.top {
 
   .arrow {
     position: absolute;
-    background: url($image-path + 'Arrow.svg');
+    background: url($svg-path + 'Arrow.svg');
     background-repeat: no-repeat;
     height: 25px;
     width: 25px;
@@ -94,7 +94,7 @@ section.top {
 
   .slash {
     position: absolute;
-    background: url($image-path + 'Slash.svg');
+    background: url($svg-path + 'Slash.svg');
     background-repeat: no-repeat;
     // Flip horizontally
     transform: scaleX(-1);
