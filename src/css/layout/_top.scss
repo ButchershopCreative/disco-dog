@@ -1,36 +1,42 @@
 section.top {
-  color: white;
-
   .parker {
     position: absolute;
-    background: url('../img/SVGS/Logo.svg');
+    background: url($image-path + 'Logo.svg');
     background-repeat: no-repeat;
-    height: 100px;
+    height: 25px;
     width: 200px;
     margin-top: -150px;
     margin-left: 50px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transition-timing-function: ease-in;
+      transform: rotate(5deg);
+    }
   }
 
   .bars {
     @include breakpoint(small) {
       position: absolute;
-      background: url('../img/SVGS/Tab.svg');
+      background: url($image-path + 'Tab.svg');
       background-repeat: no-repeat;
       height: 150px;
       width: 150px;
-      margin-top: 00px;
+      margin-top: 0px;
       margin-left: 65%;
     }
   }
 
   .circle {
     position: absolute;
-    background: url('../img/SVGS/Circle.svg');
+    background: url($image-path + 'Circle.svg');
     background-repeat: no-repeat;
     height: 250px;
     width: 250px;
     margin-top: -350px;
     margin-left: 350px;
+    animation: circleburglar 5s infinite linear;
+    
 
     @include breakpoint(small) {
       width: 400px;
@@ -38,11 +44,22 @@ section.top {
       margin-top: -100px;
       margin-left: -75px;
     }
+
+    &:after {
+      content: "";
+      display: block;
+      background-image: url($image-path + 'Dot.svg');
+      height: 25px;
+      width: 25px;
+      bottom: -7px;
+      right: calc(50% - 12.5px);
+      position: absolute;
+    }
   }
 
   .bed {
     position: absolute;
-    background: url('../img/SVGS/Bed.svg');
+    background: url($image-path + 'Bed.svg');
     background-repeat: no-repeat;
     height: 150px;
     width: 150px;
@@ -59,7 +76,7 @@ section.top {
 
   .arrow {
     position: absolute;
-    background: url('../img/SVGS/Arrow.svg');
+    background: url($image-path + 'Arrow.svg');
     background-repeat: no-repeat;
     height: 25px;
     width: 25px;
@@ -77,12 +94,9 @@ section.top {
 
   .slash {
     position: absolute;
-    background: url('../img/SVGS/Slash.svg');
+    background: url($image-path + 'Slash.svg');
     background-repeat: no-repeat;
     // Flip horizontally
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
@@ -99,6 +113,10 @@ section.top {
     };
   }
 
+  .mobile-icons {
+    position: relative;
+  }
+
   .numbers {
     display: none;
     @include breakpoint(small) {
@@ -106,8 +124,8 @@ section.top {
       position: absolute;
       display: inline-block;
       font-size: 150px;
-      margin-left: 60%;
-      margin-top: -400px;
+      right: -135px;
+      top: -400px;
       & > span {
         color: $parker-blue
       }

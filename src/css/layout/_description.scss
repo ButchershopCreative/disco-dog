@@ -1,5 +1,4 @@
 section.description {
-  color: white;
   margin-bottom: 150px;
 
   .column {
@@ -8,7 +7,7 @@ section.description {
 
   .hanger {
     position: absolute;
-    background: url('../img/SVGS/Hanger.svg');
+    background: url($image-path + 'Hanger.svg');
     background-repeat: no-repeat;
     height: 275px;
     width: 275px;
@@ -18,7 +17,7 @@ section.description {
 
   .closet {
     position: absolute;
-    background: url('../img/SVGS/Closet.svg');
+    background: url($image-path + 'Closet.svg');
     background-repeat: no-repeat;
     height: 225px;
     width: 275px;
@@ -28,16 +27,13 @@ section.description {
 
   .slash {
     position: absolute;
-    background: url('../img/SVGS/Slash.svg');
+    background: url($image-path + 'Slash.svg');
     background-repeat: no-repeat;
     height: 225px;
     width: 225px;
     margin-top: -600px;
     margin-left: 0px;
     // Flip horizontally
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     filter: FlipH;
     -ms-filter: "FlipH";
@@ -45,10 +41,8 @@ section.description {
 
   .bars {
     position: absolute;
-    background: url('../img/SVGS/Tab.svg');
+    background: url($image-path + 'Tab.svg');
     background-repeat: no-repeat;
-    -ms-transform: rotate(-180deg); /* IE 9 */
-    -webkit-transform: rotate(-180deg); /* Chrome, Safari, Opera */
     transform: rotate(-180deg);
     height: 250px;
     width: 250px;
@@ -57,6 +51,8 @@ section.description {
   }
 
   .desktop-container {
+    position: relative;
+
     @include breakpoint(small) {
       display: none;
     };
@@ -70,20 +66,15 @@ section.description {
     };
   }
 
-  ul > li {
-    color: $parker-blue;
-    margin-bottom: 15px;
-  }
-
   .bench {
-    background: url('../img/SVGS/Bench.svg');
+    background: url($image-path + 'Bench.svg');
     background-repeat: no-repeat;
     height: 350px;
   }
 
   .bench-mobile {
     position: absolute;
-    background: url('../img/SVGS/Bench.svg');
+    background: url($image-path + 'Bench.svg');
     background-repeat: no-repeat;
     height: 400px;
     width: 400px;
@@ -92,7 +83,7 @@ section.description {
 
   .circle {
     position: absolute;
-    background: url('../img/SVGS/Circle.svg');
+    background: url($image-path + 'Circle.svg');
     background-repeat: no-repeat;
     height: 400px;
     width: 400px;
@@ -110,7 +101,7 @@ section.description {
     margin-left: 100px;
   }
 
-  .test {
+  .images {
     display: inline-block;
   }
 
@@ -122,12 +113,14 @@ section.description {
     font-size: 124px;
     display: inline-block;
     transform: rotate(-90deg);
-    margin-left: 100px;
-    margin-top: 200px;
-  }
+    bottom: 160px;
+    right: -192px;
+    position: absolute;
 
-  .parkerblue {
-    color: $parker-blue;
+    // Coloring for the t's in Shattuck
+    & > span {
+      color: $parker-blue;
+    }
   }
 
   .left-images {

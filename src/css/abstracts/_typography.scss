@@ -1,8 +1,67 @@
 //All Type goes here. IE H1-H6 . P
 body {
   font-size: 16px;
+  color: $white;
+}
+
+h2 {
+  position: absolute;
+  margin: auto;
+  margin-top: -600px;
+  margin-left: 200px;
+  font-size: 120px;
+
+  & > span {
+    color: $parker-blue;
+    font-size: 75px;
+  }
+
+  @include breakpoint(medium) {
+
+  };
+
+  @include breakpoint(small) {
+    margin-top: -400px;
+    margin-left: 20px;
+
+    font-size: 80px;
+
+    & > span {
+      font-size: 40px;
+    }
+  };
 }
 
 h5 {
  font-family: “adobe-text-pro”;
+}
+
+hr {
+  color: $white;
+  margin: 0;
+}
+
+ul {
+  & > li {
+    color: $parker-blue;
+    margin-bottom: 15px;
+
+    & > span {
+      color: $white;
+    }
+  }
+
+  @include breakpoint(small) {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    & > li {
+      color: $white;
+    }
+  };
+}
+
+.white {
+  color: $white;
 }
