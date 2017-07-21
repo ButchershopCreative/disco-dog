@@ -10,7 +10,7 @@
 .appear {
   position: relative;
   opacity: 0;
-  transition: opacity 1.0s, top 0.8s, left 0.8s, right 0.8s, bottom 0.8s;
+  transition: opacity 3.0s, top 0.8s, left 0.8s, right 0.8s, bottom 0.8s, margin 1.3s;
   &.visible-element {
     opacity: 1;
   }
@@ -24,7 +24,7 @@
 }
 
 .fly-left {
-  left: 100px;
+  left: 300px;
   &.visible-element {
     left: 0;
   }
@@ -38,8 +38,8 @@
 }
 
 .fly-top {
-  top: 100px;
+  top: 70px;
   &.visible-element {
-    top: 0;
+    top: 220px;
   }
 }

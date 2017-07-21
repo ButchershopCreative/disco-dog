@@ -161,7 +161,7 @@ section.footer {
 
   .funky-icons {
     position: absolute;
-    left: 0;
+    left: -100px;
     margin-top: -150px;
     @include breakpoint(small) {
       left: auto;
@@ -170,6 +170,10 @@ section.footer {
       transform: scaleX(-1);
       filter: FlipH;
     };
+
+    &.visible-element {
+      left:0;
+    }
   }
 
   .social-mobile {

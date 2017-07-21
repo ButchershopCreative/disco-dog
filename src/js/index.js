@@ -15,6 +15,7 @@ import Example from './components/_Example.js';
         },
         appear: function appear(el) {
           var item = $(el);
+          console.log("ADDING", el);
           item.addClass('visible-element');
         },
         bounds: 0

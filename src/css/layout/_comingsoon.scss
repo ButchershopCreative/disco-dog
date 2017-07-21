@@ -67,12 +67,16 @@ section.comingsoon {
     width: 200px;
     height: 200px;
     bottom: 20px;
-    right: -70px;
+    right: -170px;
 
     @include breakpoint(medium) {
       display: none;
     };
 
+
+    &.visible-element {
+      right: -70px;
+    }
   }
 
   .rotate-bars {
@@ -83,6 +87,7 @@ section.comingsoon {
     background: url($svg-path + 'Tab.svg');
     background-repeat: no-repeat;
     height: 100px;
+    margin-left: -300px;
 
     @include breakpoint(small) {
       height: 150px;
@@ -91,5 +96,9 @@ section.comingsoon {
       bottom: 360px;
       left: calc(50% - 75px);
     };
+
+    &.visible-element {
+      margin-left: 0px;
+    }
   }
 }
