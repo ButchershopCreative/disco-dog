@@ -6,3 +6,40 @@
     transform: rotate(360deg);
   }
 }
+
+.appear {
+  position: relative;
+  opacity: 0;
+  transition: opacity 1.0s, top 0.8s, left 0.8s, right 0.8s, bottom 0.8s;
+  &.visible-element {
+    opacity: 1;
+  }
+}
+
+.fly-right {
+  right: 100px;
+  &.visible-element {
+    right: 0;
+  }
+}
+
+.fly-left {
+  left: 100px;
+  &.visible-element {
+    left: 0;
+  }
+}
+
+.fly-bottom {
+  bottom: 100px;
+  &.visible-element {
+    bottom: 0;
+  }
+}
+
+.fly-top {
+  top: 100px;
+  &.visible-element {
+    top: 0;
+  }
+}

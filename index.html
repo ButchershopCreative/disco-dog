@@ -12,8 +12,8 @@
 <body>
   <section class="top">
   <div class="header">
-    <div class="parker"></div>
-    <div class="circle"></div>
+    <div class="parker appear fly-left"></div>
+    <div class="circle appear"></div>
   </div>
   <div class="mobile-icons">
     <div class="bars"></div>
@@ -21,7 +21,7 @@
   </div>
   <div class="row">
      <div class="column push-left small-12 medium-6">
-         <img class="vertical-image" src="/src/img/image-01.jpg" alt="">
+       <img class="lazy vertical-image appear fly-right" data-original="/src/img/image-01.jpg" alt="">
      </div>
 
      <div class="column small-12 medium-6">
@@ -31,16 +31,16 @@
       </div>
      </div>
   </div>
-  <div class="arrow"></div>
-  <div class="slash"></div>
-  <div class="bed"></div>
+  <div class="arrow appear"></div>
+  <div class="slash appear"></div>
+  <div class="bed appear"></div>
 </section>
 
   <section class="description">
   <div class="desktop-container">
     <div class="row">
       <div class="column small-6 large-6">
-        <div class="bench">
+        <div class="bench appear fly-right">
         </div>
       </div>
       <div class="column small-6 large-6">
@@ -82,16 +82,16 @@
       </div>
       <div class="column small-6 large-6">
         <div class="right-pictures">
-          <img src="/dist/img/image-03.jpg" alt="">
-          <img src="/dist/img/image-02.jpg" alt="">
+          <img data-original="/dist/img/image-03.jpg" class="lazy appear fly-left" alt="">
+          <img data-original="/dist/img/image-02.jpg" class="lazy appear fly-left" alt="">
         </div>
       </div>
 
       <div class="column small-6 large-6">
-        <img src="/dist/img/image-04.jpg" alt="">
+          <img data-original="/dist/img/image-04.jpg" class="lazy appear fly-right" alt="">
       </div>
       <div class="column small-6 large-6">
-        <div class="shattuck">
+        <div class="shattuck appear">
             sha<span>tt</span>uck
         </div>
       </div>
@@ -101,9 +101,9 @@
   <div class="mobile-container">
     <div class="closet"></div>
     <div class="images">
-      <img class="left-images" src="/dist/img/image-03.jpg" alt="">
-      <img class="left-images" src="/dist/img/image-02.jpg" alt="">
-      <img class="cooking-lady" src="/dist/img/image-04.jpg" alt="">
+      <img class="lazy left-images" data-original="/dist/img/image-03.jpg" alt="">
+      <img class="lazy left-images" data-original="/dist/img/image-02.jpg" alt="">
+      <img class="lazy cooking-lady" data-original="/dist/img/image-04.jpg" alt="">
     </div>
     <div class="bars"></div>
     <div class="slash"></div>
@@ -131,7 +131,7 @@
 
   <section class="comingsoon">
   <!-- Picture -->
-  <div class="boxingman">
+  <div class="boxingman appear">
     <!--  div w/ background image, h2 inside-->
     <!-- <img src="/src/img/image-05.jpg" alt=""> -->
     <h2>COMING <span>2016</span></h2>
@@ -140,7 +140,7 @@
   <div class="row">
     <!-- Bars  -->
     <div class="column small-12 medium-4">
-      <div class="rotate-bars bars"></div>
+      <div class="rotate-bars bars appear"></div>
     </div>
 
      <!-- Offset form and couch to the right -->
@@ -179,13 +179,13 @@
     </div>
   </div>
 
-  <div class="couch"></div>
+  <div class="couch appear"></div>
 </section>
 
   <section class="footer">
-  <div class="couch"></div>
-  <div class="parkercss"></div>
-  
+  <div class="couch appear"></div>
+  <div class="parkercss appear"></div>
+
   <div class="contact-container">
     <p>2600 Shattuck Ave, Berkeley, CA 94704</p>
     <p class="phone">(844) 727-0715</p>
@@ -214,13 +214,20 @@
     <div class="twitter-hover"></div>
   </div>
 
-  <div class="funky-icons">
+  <div class="funky-icons appear">
     <div class="tab"></div>
     <div class="triangles"></div>
   </div>
 </section>
 
+  <script src="./src/js/jquery.min.js">
+  </script>
+  <script src="./src/js/jquery.lazyload.min.js">
+
+  </script>
+  <script src="./src/js/appear.js"></script>
   <script src="./dist/scripts/bundle.js"></script>
+  <!-- <script src="./src/js/jquery.lazyload.min.js"></script> -->
   <!-- Google Analytics Will Go Here -->
 </body>
 

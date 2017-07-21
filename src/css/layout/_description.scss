@@ -55,7 +55,7 @@ section.description {
 
     @include breakpoint(small) {
       display: none;
-    };
+    }
 
     .bench {
       background: url($svg-path + 'Bench.svg');
@@ -69,7 +69,7 @@ section.description {
     margin-top: 200px;
     @include breakpoint(small) {
       display: block;
-    };
+    }
 
     .bench-mobile {
       position: absolute;
@@ -134,7 +134,7 @@ section.description {
     position: absolute;
 
     // Coloring for the t's in Shattuck
-    & > span {
+    span {
       color: $parker-blue;
     }
   }
