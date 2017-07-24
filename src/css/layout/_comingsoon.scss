@@ -3,6 +3,10 @@ section.comingsoon {
   margin-bottom: 250px;
   position: relative;
 
+  h2 {
+    z-index: 999;
+  }
+
   img {
     position: relative;
     padding-bottom: 200px;
