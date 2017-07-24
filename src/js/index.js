@@ -22,5 +22,14 @@ import Example from './components/_Example.js';
       })
     }
   }
-  $(document).ready(function() { App.init(); App.initAppearWatchers(); $("img.lazy").lazyload({});});
+  $(document).ready(function() {
+    App.init();
+    App.initAppearWatchers();
+    $(function() {
+      $('.lazy').Lazy({
+        threshold: 100,
+        delay: 5
+      });
+    });
+  });
 })(jQuery);
