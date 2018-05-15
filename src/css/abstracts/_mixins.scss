@@ -1,0 +1,290 @@
+@mixin breakpoint($class) {
+  @if $class == xsmall-landscape {
+    @media screen and (max-width: 37.5em) and (orientation : landscape),
+            screen and (max-height: 20em) and (orientation : landscape) { @content; }
+  }
+  @else if $class == xsmall {
+    @media screen and (max-height: 20em) and (orientation : portrait),
+            screen and (max-height: 40em) and (orientation : portrait) { @content; }
+  }
+  @else if $class == small {
+    @media screen and (max-width: 40em) { @content; }
+    @media screen and (max-width: 46em)  and (max-height: 25.875em)
+      and (orientation : landscape) { @content; }
+  }
+  @else if $class == small-landscape {
+    @media screen and (max-width: 46em)  and (max-height: 25.875em)
+      and (orientation : landscape) { @content; }
+  }
+  @else if $class == medium {
+    @media screen and (max-width: 63.9375em) { @content; }
+  }
+  @else if $class == large {
+    @media screen and (max-width: 90em) { @content; }
+  }
+  @else if $class == xlarge {
+    @media screen and (min-width: 100.063em) { @content; }
+  }
+  @else if $class == xlarge-height {
+    @media screen and (min-height: 75em) { @content; }
+  }
+  @else if $class == mobile-nav {
+    @media screen and (max-width: 58.750em) { @content; }
+  }
+  @else if $class == no-mobile {
+    @media screen and (min-width: 48em) { @content; }
+  }
+  @else if $class == ie {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin not supported";
+  }
+}
+
+@mixin breakpointCustom($num) {
+  @media only screen and (max-width: $num) {
+    @content;
+  }
+}
+
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/* box overlays: zag component, heroes, etc */
+@mixin box-overlay($color: $white, $height: 450px,  $width: 450px) {
+  position: relative;
+  min-height: $height;
+  width: $width;
+  z-index: 2;
+  &:after {
+    content: "";
+    background-color: $color;
+    opacity: 0.95;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+@mixin pearlBlock($bgcolor: $pearl, $minWidth: 800px, $height: 355px, $top: auto, $bottom: auto) {
+  background-color: $bgcolor;
+  min-width: $minWidth;
+  width: 100vw;
+  height: $height;
+  position: absolute;
+  z-index: -1;
+  top: $top;
+  bottom: $bottom;
+}
+
+/* adding underline to links */
+@mixin linkLine($color: $terra, $startRight: 0, $afterRight: 100%, $bottom: -4px, $hovColor: $terra) {
+  position: relative;
+  transition: color 250ms ease-in-out;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: $startRight;
+    bottom: $bottom;
+    background: $color;
+    height: 2px;
+    transition: right 250ms ease-in-out;
+  }
+  &:hover,
+  &:active {
+    color: $hovColor;
+    &:after {
+      right: $afterRight;
+    }
+  }
+}
+
+
+@mixin noLine() {
+  &:after {
+    content: none;
+  }
+}
+
+@mixin greyBlock($bgcolor: $lunar, $height: 60px, $width: 296px, $left: 0, $top: 0) {
+  &:before {
+    content: "";
+    opacity: 0.1;
+    position: absolute;
+    background-color: $bgcolor;
+    height: $height;
+    width: $width;
+    left: $left;
+    top: $top;
+    z-index: -1;
+  }
+}
+
+@mixin sidebarText() {
+  position: relative;
+  z-index: 10;
+  transform: rotate(270deg);
+  transform-origin: center center;
+  mix-blend-mode: multiply;
+}
+
+@mixin inputArrow($beforeRight: 28px, $afterTop: 15px, $afterRight: 20px) {
+  position: relative;
+  height: 46px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: $beforeRight;
+    top: 22px;
+    width: 32px;
+    height: 2px;
+    background-color: $ash;
+    transition: 800ms $cubic all;
+    transform: translateX(0);
+    @include breakpointCustom(700px) {
+      right: 18px;
+    }
+    @include breakpoint(small) {
+      right: 22px;
+    }
+  }
+
+  &:after {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: $afterTop;
+  }
+
+  &.btn-arrow-right {
+    &:after {
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 0px solid transparent;
+      border-left: 8px solid $ash;
+      right: $afterRight;
+      transition: 800ms $cubic all;
+      @include breakpointCustom(700px) {
+        right: 10px;
+      }
+      @include breakpoint(small) {
+        right: 14px;
+      }
+    }
+
+    &:hover {
+      &:before {
+        width: 20px;
+        transform: translateX(6px);
+        background-color: $terra;
+      }
+      &:after {
+        border-left-color: $terra;
+      }
+    }
+  }
+}
+
+@mixin greyscaleImg() {
+  filter: grayscale(100%);
+}
+
+/* put on a container box around text that needs multiline ellipse cut off
+   add margin-bottom: 0 to the actual text element (h3)
+   note: does not work in firefox or ie
+         do not use on medium posts */
+@mixin multilineEllipsis($numRows: 2, $maxWidth: 400px, $lineHeight: 36px, $fontSize: 1rem) {
+  -webkit-line-clamp: $numRows;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: $maxWidth;
+  line-height: $lineHeight;
+}
+
+
+@mixin socialIcons() {
+  @include flexcenter();
+  justify-content: flex-start;
+  a {
+    margin: 0 10px;
+    height: 25px;
+    width: 20px;
+    @include flexcenter();
+    align-items: flex-end;
+    &:first-child() {
+      margin-left: 0;
+    }
+    img {
+      @include breakpoint(ie) {
+        height: 25px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+/* section title with grey background
+   zag, team landing, news grid
+*/
+@mixin sectionTitleBG() {
+  position: relative;
+  padding-bottom: 5rem;
+  @include breakpoint(small) {
+    padding-bottom: 3rem;
+  }
+
+  h4 {
+    @include greyBlock($lunar, 60px, 50%, -41.6666666667%, -45px);
+    @include breakpoint(medium) {
+      &:before {
+        left: -33.3333333333%;
+      }
+    }
+    @include breakpoint(small) {
+      &:before {
+        left: -25%;
+        top: -50px;
+      }
+    }
+
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    @content;
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    opacity: 1;
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    opacity: 1;
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    opacity: 1;
+    @content;
+  }
+}

@@ -1,13 +1,30 @@
-@import 'normalize';
-@import 'vars';
-@import 'mixins';
-@import 'fonts';
-@import 'typography';
+// https://sass-guidelin.es/#the-7-1-pattern
+
+// Themes
+
+// Vendors
+@import 'vendors/_normalize';
+@import 'vendors/_foundation';
+
+// Abstracts
+@import 'abstracts/_vars';
+@import 'abstracts/_mixins';
+
+// Base
+@import 'base/_fonts';
+@import 'base/_typography';
+@import 'base/_elements';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// Components
+
+// Pages
 
 body {
-  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+  background-color: $white;
 }
-
-
-
-

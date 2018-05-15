@@ -1,0 +1,32 @@
+/* directories */
+$fonts: '../../fonts/';
+
+/* fonts */
+$AkrobatBlack     : 'AkrobatBlack', Arial, sans-serif;
+$AkrobatBold      : 'AkrobatBold', Arial, sans-serif;
+$AkrobatExtraBold : 'AkrobatExtraBold', Arial, sans-serif;
+$AkrobatExtraLight: 'AkrobatExtraLight', Arial, sans-serif;
+$AkrobatLight     : 'AkrobatLight', Arial, sans-serif;
+$AkrobatRegular   : 'AkrobatRegular', Arial, sans-serif;
+$AkrobatSemiBold  : 'AkrobatSemiBold', Arial, sans-serif;
+$AkrobatThin      : 'AkrobatThin', Arial, sans-serif;
+
+$HelveticaNeue    : "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+/* colors */
+$ash: #353A41;
+$charcoal: #302C2C;
+$clover: #56BE92;
+$cortez: #4993CF;
+$pearl: #FBF9F0;
+$white: #FFFFFF;
+$terra: #ED6C5C;
+$lunar: #CFCBCA;
+$terra-error: rgba($terra, 0.30);
+
+/* img path */
+$imgpath: '../../images/';
+
+/* transitions */
+$cubic: cubic-bezier(.41,.87,.54,.8);
