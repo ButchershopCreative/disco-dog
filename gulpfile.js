@@ -23,35 +23,25 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest('dist/scripts'));
 });
 
-gulp.task('test', function() {
+gulp.task('build', function() {
   runSequence(
     'build-html',
     'build-images',
     'build-sass',
     'build-scripts',
     'build-fonts',
-    'live-connect',
-    'live-watch'
   );
 
 });
 
-
 gulp.task('default',
   [
-    'fileinclude',
-    'fonts',
-    'images',
-    'scripts',
-    'styles',
+    'build-fonts',
+    'dev-fileinclude',
+    'dev-images',
+    'dev-scripts',
+    'dev-sass',
+    'live-connect',
+    'live-watch'
   ]);
-gulp.task('live',
-  [
-    'fileinclude',
-    'fonts',
-    'images',
-    'styles',
-    'scripts'
-  ]);
-
 

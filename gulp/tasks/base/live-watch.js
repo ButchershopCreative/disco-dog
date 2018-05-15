@@ -10,9 +10,9 @@ gulp.task('html', function() {
 });
 
 gulp.task('live-watch', function() {
-  gulp.watch('./src/css/**/*.scss', ['styles']);
-  gulp.watch('./src/js/**/*.js', ['scripts']);
-  gulp.watch(['./src/*.html', './src/partials/*.html'], ['fileinclude', 'html']);
-  gulp.watch(['./dist/**/*.js', './dist/**/*.css'], ['html']); // Needs to watch when its compiled
+  gulp.watch('./src/css/**/*.scss', ['dev-sass']);
+  gulp.watch('./src/js/**/*.js', ['dev-scripts']);
+  gulp.watch(['./src/*.html', './src/partials/*.html'], ['dev-fileinclude', 'dev-html']);
+  gulp.watch(['./dist/**/*.js', './dist/**/*.css'], ['dev-html']); // Needs to watch when its compiled
 });
 
